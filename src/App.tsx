@@ -4,7 +4,13 @@ import { Menu } from './components/Menu';
 
 import './styles/theme.css';
 import './styles/global.css';
+
 import { CountDown } from './components/CountDown';
+import { DefaultInput } from './components/DefaultInput';
+import { Cycles } from './components/Cycles';
+import { DefaultButton } from './components/DefaultButton';
+import { PlayCircleIcon } from 'lucide-react';
+import { Footer } from './components/Footer';
 
 export function App() {
   return (
@@ -19,6 +25,34 @@ export function App() {
 
       <Container>
         <CountDown />
+      </Container>
+
+      <Container>
+        <form className='form' action=''>
+          <div className='formRow'>
+            <DefaultInput
+              id='meuInput'
+              type='text'
+              placeholder='Digite algo'
+              defaultValue='Preenchido'
+            />
+          </div>
+
+          <div className='formRow'>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+
+          <div className='formRow'>
+            <Cycles />
+          </div>
+          <div className='formRow'>
+            <DefaultButton icon={<PlayCircleIcon />} color='green' />
+          </div>
+        </form>
+      </Container>
+
+      <Container>
+        <Footer />
       </Container>
     </>
   );
